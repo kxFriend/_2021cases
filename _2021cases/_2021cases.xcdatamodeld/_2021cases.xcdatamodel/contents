@@ -1,9 +1,76 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="true" userDefinedModelVersionIdentifier="">
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Address" representedClassName="Address" syncable="YES">
+        <attribute name="building" optional="YES" attributeType="String"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="courtroom" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="mailIndex" optional="YES" attributeType="String"/>
+        <attribute name="office" optional="YES" attributeType="String"/>
+        <attribute name="owner_id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="street" optional="YES" attributeType="String"/>
+        <relationship name="parenAddress" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Info" inverseName="ns_addresses" inverseEntity="Info"/>
+        <relationship name="parenHearing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hearing" inverseName="ns_place" inverseEntity="Hearing"/>
+    </entity>
+    <entity name="Cases" representedClassName="Cases" syncable="YES">
+        <attribute name="courtRegNum" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="ns_instances" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Instance" inverseName="parentCase" inverseEntity="Instance"/>
+    </entity>
+    <entity name="Court" representedClassName="Court" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="instance_id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="ns_hearings" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hearing" inverseName="parenCourt" inverseEntity="Hearing"/>
+        <relationship name="ns_udge" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Judge" inverseName="ns_parenCourt" inverseEntity="Judge"/>
+        <relationship name="parenInstance" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Instance" inverseName="ns_courts" inverseEntity="Instance"/>
+    </entity>
+    <entity name="Hearing" representedClassName="Hearing" syncable="YES">
+        <attribute name="court_id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="YES"/>
+        <relationship name="ns_place" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address" inverseName="parenHearing" inverseEntity="Address"/>
+        <relationship name="parenCourt" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Court" inverseName="ns_hearings" inverseEntity="Court"/>
+    </entity>
+    <entity name="Info" representedClassName="Info" syncable="YES">
+        <attribute name="adress_id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="owner_id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="telephone" optional="YES" attributeType="String"/>
+        <relationship name="ns_addresses" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address" inverseName="parenAddress" inverseEntity="Address"/>
+        <relationship name="parenInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="personalInfo" inverseEntity="Person"/>
+    </entity>
+    <entity name="Instance" representedClassName="Instance" syncable="YES">
+        <attribute name="court_id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="instance_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="ns_courts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Court" inverseName="parenInstance" inverseEntity="Court"/>
+        <relationship name="parentCase" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cases" inverseName="ns_instances" inverseEntity="Cases"/>
+    </entity>
+    <entity name="Judge" representedClassName="Judge" syncable="YES">
+        <attribute name="court_id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="ns_parenCourt" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Court" inverseName="ns_udge" inverseEntity="Court"/>
+        <relationship name="ns_personal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="parenOwner" inverseEntity="Person"/>
+    </entity>
+    <entity name="Person" representedClassName="Person" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="info_id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="owner_id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="secondName" optional="YES" attributeType="String"/>
+        <relationship name="parenOwner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Judge" inverseName="ns_personal" inverseEntity="Judge"/>
+        <relationship name="personalInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Info" inverseName="parenInfo" inverseEntity="Info"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="Cases" positionX="-1897.903503417969" positionY="-13532.50303649903" width="128" height="103"/>
+        <element name="Court" positionX="-1687.511352539062" positionY="-13322.1890258789" width="128" height="133"/>
+        <element name="Instance" positionX="-1898.190002441406" positionY="-13400.58744812012" width="128" height="103"/>
+        <element name="Judge" positionX="-1678.293823242188" positionY="-13093.95846557617" width="128" height="103"/>
+        <element name="Person" positionX="-1839.400451660156" positionY="-13041.39599609375" width="128" height="148"/>
+        <element name="Info" positionX="-2076.517272949219" positionY="-13012.83029174805" width="128" height="133"/>
+        <element name="Address" positionX="-2063.766052246094" positionY="-13371.82633972168" width="128" height="193"/>
+        <element name="Hearing" positionX="-1851.279052734375" positionY="-13186.90539550781" width="128" height="133"/>
     </elements>
 </model>

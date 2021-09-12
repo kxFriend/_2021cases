@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E96D5F0E26EE0ADD00400153 /* Instance+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D5EFE26EE0ADD00400153 /* Instance+CoreDataClass.swift */; };
+		E96D5F0F26EE0ADD00400153 /* Instance+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D5EFF26EE0ADD00400153 /* Instance+CoreDataProperties.swift */; };
+		E96D5F1026EE0ADD00400153 /* Court+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D5F0026EE0ADD00400153 /* Court+CoreDataClass.swift */; };
+		E96D5F1126EE0ADD00400153 /* Court+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D5F0126EE0ADD00400153 /* Court+CoreDataProperties.swift */; };
+		E96D5F1226EE0ADD00400153 /* Judge+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D5F0226EE0ADD00400153 /* Judge+CoreDataClass.swift */; };
+		E96D5F1326EE0ADD00400153 /* Judge+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D5F0326EE0ADD00400153 /* Judge+CoreDataProperties.swift */; };
+		E96D5F1426EE0ADD00400153 /* Hearing+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D5F0426EE0ADD00400153 /* Hearing+CoreDataClass.swift */; };
+		E96D5F1526EE0ADD00400153 /* Hearing+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D5F0526EE0ADD00400153 /* Hearing+CoreDataProperties.swift */; };
+		E96D5F1626EE0ADD00400153 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D5F0626EE0ADD00400153 /* Person+CoreDataClass.swift */; };
+		E96D5F1726EE0ADD00400153 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D5F0726EE0ADD00400153 /* Person+CoreDataProperties.swift */; };
+		E96D5F1826EE0ADD00400153 /* Info+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D5F0826EE0ADD00400153 /* Info+CoreDataClass.swift */; };
+		E96D5F1926EE0ADD00400153 /* Info+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D5F0926EE0ADD00400153 /* Info+CoreDataProperties.swift */; };
+		E96D5F1A26EE0ADD00400153 /* Address+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D5F0A26EE0ADD00400153 /* Address+CoreDataClass.swift */; };
+		E96D5F1B26EE0ADD00400153 /* Address+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D5F0B26EE0ADD00400153 /* Address+CoreDataProperties.swift */; };
+		E96D5F1C26EE0ADD00400153 /* Cases+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D5F0C26EE0ADD00400153 /* Cases+CoreDataClass.swift */; };
+		E96D5F1D26EE0ADD00400153 /* Cases+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D5F0D26EE0ADD00400153 /* Cases+CoreDataProperties.swift */; };
 		E9BA675526BDEB3500676563 /* _2021casesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA675426BDEB3500676563 /* _2021casesApp.swift */; };
 		E9BA675726BDEB3500676563 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA675626BDEB3500676563 /* ContentView.swift */; };
 		E9BA675926BDEB3600676563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9BA675826BDEB3600676563 /* Assets.xcassets */; };
@@ -16,6 +32,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E96D5EFE26EE0ADD00400153 /* Instance+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instance+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		E96D5EFF26EE0ADD00400153 /* Instance+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instance+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		E96D5F0026EE0ADD00400153 /* Court+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Court+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		E96D5F0126EE0ADD00400153 /* Court+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Court+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		E96D5F0226EE0ADD00400153 /* Judge+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Judge+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		E96D5F0326EE0ADD00400153 /* Judge+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Judge+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		E96D5F0426EE0ADD00400153 /* Hearing+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hearing+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		E96D5F0526EE0ADD00400153 /* Hearing+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hearing+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		E96D5F0626EE0ADD00400153 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		E96D5F0726EE0ADD00400153 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		E96D5F0826EE0ADD00400153 /* Info+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Info+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		E96D5F0926EE0ADD00400153 /* Info+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Info+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		E96D5F0A26EE0ADD00400153 /* Address+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Address+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		E96D5F0B26EE0ADD00400153 /* Address+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Address+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		E96D5F0C26EE0ADD00400153 /* Cases+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cases+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		E96D5F0D26EE0ADD00400153 /* Cases+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cases+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		E9BA675126BDEB3500676563 /* _2021cases.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _2021cases.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9BA675426BDEB3500676563 /* _2021casesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _2021casesApp.swift; sourceTree = "<group>"; };
 		E9BA675626BDEB3500676563 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +69,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E91974AD26EA3940001529E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E96D5EFE26EE0ADD00400153 /* Instance+CoreDataClass.swift */,
+				E96D5EFF26EE0ADD00400153 /* Instance+CoreDataProperties.swift */,
+				E96D5F0026EE0ADD00400153 /* Court+CoreDataClass.swift */,
+				E96D5F0126EE0ADD00400153 /* Court+CoreDataProperties.swift */,
+				E96D5F0226EE0ADD00400153 /* Judge+CoreDataClass.swift */,
+				E96D5F0326EE0ADD00400153 /* Judge+CoreDataProperties.swift */,
+				E96D5F0426EE0ADD00400153 /* Hearing+CoreDataClass.swift */,
+				E96D5F0526EE0ADD00400153 /* Hearing+CoreDataProperties.swift */,
+				E96D5F0626EE0ADD00400153 /* Person+CoreDataClass.swift */,
+				E96D5F0726EE0ADD00400153 /* Person+CoreDataProperties.swift */,
+				E96D5F0826EE0ADD00400153 /* Info+CoreDataClass.swift */,
+				E96D5F0926EE0ADD00400153 /* Info+CoreDataProperties.swift */,
+				E96D5F0A26EE0ADD00400153 /* Address+CoreDataClass.swift */,
+				E96D5F0B26EE0ADD00400153 /* Address+CoreDataProperties.swift */,
+				E96D5F0C26EE0ADD00400153 /* Cases+CoreDataClass.swift */,
+				E96D5F0D26EE0ADD00400153 /* Cases+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E9BA674826BDEB3500676563 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +111,7 @@
 		E9BA675326BDEB3500676563 /* _2021cases */ = {
 			isa = PBXGroup;
 			children = (
+				E91974AD26EA3940001529E1 /* Model */,
 				E9BA675426BDEB3500676563 /* _2021casesApp.swift */,
 				E9BA675626BDEB3500676563 /* ContentView.swift */,
 				E9BA675826BDEB3600676563 /* Assets.xcassets */,
@@ -144,10 +200,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96D5F1726EE0ADD00400153 /* Person+CoreDataProperties.swift in Sources */,
 				E9BA675E26BDEB3600676563 /* Persistence.swift in Sources */,
+				E96D5F1826EE0ADD00400153 /* Info+CoreDataClass.swift in Sources */,
+				E96D5F1126EE0ADD00400153 /* Court+CoreDataProperties.swift in Sources */,
 				E9BA675726BDEB3500676563 /* ContentView.swift in Sources */,
+				E96D5F0F26EE0ADD00400153 /* Instance+CoreDataProperties.swift in Sources */,
+				E96D5F1526EE0ADD00400153 /* Hearing+CoreDataProperties.swift in Sources */,
+				E96D5F1D26EE0ADD00400153 /* Cases+CoreDataProperties.swift in Sources */,
+				E96D5F1026EE0ADD00400153 /* Court+CoreDataClass.swift in Sources */,
+				E96D5F1B26EE0ADD00400153 /* Address+CoreDataProperties.swift in Sources */,
 				E9BA676126BDEB3600676563 /* _2021cases.xcdatamodeld in Sources */,
+				E96D5F0E26EE0ADD00400153 /* Instance+CoreDataClass.swift in Sources */,
 				E9BA675526BDEB3500676563 /* _2021casesApp.swift in Sources */,
+				E96D5F1226EE0ADD00400153 /* Judge+CoreDataClass.swift in Sources */,
+				E96D5F1C26EE0ADD00400153 /* Cases+CoreDataClass.swift in Sources */,
+				E96D5F1626EE0ADD00400153 /* Person+CoreDataClass.swift in Sources */,
+				E96D5F1A26EE0ADD00400153 /* Address+CoreDataClass.swift in Sources */,
+				E96D5F1326EE0ADD00400153 /* Judge+CoreDataProperties.swift in Sources */,
+				E96D5F1426EE0ADD00400153 /* Hearing+CoreDataClass.swift in Sources */,
+				E96D5F1926EE0ADD00400153 /* Info+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
